@@ -122,3 +122,20 @@ Feel free to explore my repositories and projects!
 ---
 
 *This GitHub profile showcases technical learning projects and practical experience in software delivery and DevOps.*
+## 🏗️ Multi-Repository Architecture
+
+```mermaid
+flowchart TD
+    GH[GitHub Repositories]
+
+    GH --> SH[Shared Class Library]
+    GH --> BA[Basket Web API]
+    GH --> ID[Identity Web API]
+    GH --> OR[Order Web API]
+
+    SH --> PIPE[Azure DevOps Pipeline]
+    PIPE --> FEED[Azure Artifacts - Shared Feed]
+
+    FEED --> BA
+    FEED --> ID
+    FEED --> OR
